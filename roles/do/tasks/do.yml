@@ -1,0 +1,4 @@
+---
+  - name: Hello world! 
+    debug:
+      msg: "secret: {{ content_encrypted }}"

@@ -1,0 +1,5 @@
+---
+- import_playbook: main.yml
+  vars:
+    target: beta
+    context: "{{ context }}"
