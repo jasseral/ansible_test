@@ -14,6 +14,7 @@ jobs:
       - run: |
           echo hola
           echo "🎉 triggered by a ${{ github.event_name }}"
+          echo ${{ secrets.MASTER_KEY }}
       # This preconditions needs to be encapsulated DYR , We need to create our customized base image 
       #- uses: actions/checkout@v1
       #- run: echo "🎉 triggered by a ${{ github.event_name }} digitalAge team event."
