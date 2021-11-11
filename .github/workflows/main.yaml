@@ -12,10 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: |
-          VERSION=xd
           echo hola
-          echo "🎉 triggered by a ${{ github.event_name }} 
-
+          echo "🎉 triggered by a ${{ github.event_name }}
       # This preconditions needs to be encapsulated DYR , We need to create our customized base image 
       #- uses: actions/checkout@v1
       #- run: echo "🎉 triggered by a ${{ github.event_name }} digitalAge team event."
