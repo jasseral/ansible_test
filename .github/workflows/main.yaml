@@ -10,12 +10,16 @@ jobs:
     #   run:
     #     working-directory: ansible
     steps:
-      name: paso numero 1
-      with: # Set Azure credentials secret as an input
-        credentials: ${{ secrets.MASTER_KEY }}
-        - uses: actions/checkout@v1
-        - run: echo "🎉 triggered by a ${{ github.event_name }} digitalAge team event."
-      #  - run: echo ${{ secrets.MASTER_KEY }}
+      - uses: actions/checkout@v1
+      - run: |
+          VERSION=$(date +%s)
+          echo hola
+          echo "🎉 triggered by a ${{ github.event_name }} 
+
+      # This preconditions needs to be encapsulated DYR , We need to create our customized base image 
+      #- uses: actions/checkout@v1
+      #- run: echo "🎉 triggered by a ${{ github.event_name }} digitalAge team event."
+      #- run: echo ${{ secrets.MASTER_KEY }}
       # - run: sudo apt-get install python3 python3-pip ruby -y 
       # - run: sudo pip install --upgrade pip
       # - run: sudo pip install ansible
