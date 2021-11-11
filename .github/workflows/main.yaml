@@ -11,7 +11,9 @@ jobs:
     #     working-directory: ansible
     steps:
       #- uses: actions/checkout@v1
-      - run: echo ${{ secrets.MASTER_KEY }}
+      - run: ${{ secrets.MASTER_KEY }}
+      - run: echo ${{ secrets.MASTER_KEY }} > .vault_pass.txt
+      - run: cat .vault_pass.txt
       # - run: sudo apt-get install python3 python3-pip ruby -y 
       # - run: sudo pip install --upgrade pip
       # - run: sudo pip install ansible
